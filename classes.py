@@ -112,8 +112,6 @@ class Polygon:
         self.offset_of_points_along_the_coordinate_axis(new_point_a, new_point_b, offset_value)
 
         # TODO self.offset_of_points_parallel_to_the_segment(new_point_a, new_point_b, offset_value)
-        # coords for new line, parallel to old_line in distance offset_value
-        # old_line = self._segment_formula(old_point_a.as_tuple(), old_point_b.as_tuple())
 
         new_line = self._segment_formula(new_point_a.as_tuple(), new_point_b.as_tuple())
 
@@ -122,15 +120,7 @@ class Polygon:
         intersection_next = solve((new_line, self._segment_formula(next_point_a, next_point_b)), (x, y))
 
         # TODO cut redundant Segment for previous
-        # if self._check_if_broken(previous_point_b, intersection_previous, previous_point_a):
-        #     self.neighbor_correction2 += 1
-        #     previous_point_a, previous_point_b = self._get_previous_segment_points(index)
-        #     intersection_previous = solve((new_line, self._segment_formula(previous_point_a, previous_point_b)), (x, y))
         # TODO cut redundant Segment for next
-        # if self._check_if_broken(next_point_a, intersection_next, next_point_b):
-        #     self.neighbor_correction += 1
-        #     next_point_a, next_point_b = self._get_next_segment_points(index)
-        #     intersection_next = solve((new_line, self._segment_formula(next_point_a, next_point_b)), (x, y))
         # TODO cut redundant Segment if intersection_next == intersection_previous
 
         old_point_a.x, old_point_a.y = intersection_previous[x], intersection_previous[y]
