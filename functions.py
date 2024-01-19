@@ -41,4 +41,3 @@ def input_offset_value():
             return float(user_input)
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
-
