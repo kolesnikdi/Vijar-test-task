@@ -3,12 +3,8 @@ from functions import input_polygon_data, input_segment_index, input_offset_valu
 
 """
     1. Index - is the numeric name of the "Segment". Numeration begins from 0.
-    2. If offset_type == 'along_axis' or else we use offset_of_points_along_the_coordinate_axis() - moves the "Segment"
-     to the right or left along the "X" axis. Exception: if point_a.y == point_b.y we moves the "Segment" to the down
-     or high along the "Y" axis.
-    3. If offset_type == 'parallel' we use offset_of_points_parallel_to_the_segment() - moves the "Segment" to a
-     distance that is parallel to it (as shows on test picture)
-    4. Handled exceptions:
+    2. We use moves the "Segment" to a distance that is parallel to it (as shows on test picture)
+    3. Handled exceptions:
         - If new intersection is higher or equal than intersection of neighbouring lines our intersection point will
          be the intersection of neighbours
         - If there are less than 2 Segments left, we cut redundant Segments and leave only one Segment with one point 
@@ -20,7 +16,7 @@ from functions import input_polygon_data, input_segment_index, input_offset_valu
 def run_test_task():
     polygon = Polygon(input_polygon_data())
     polygon.draw()
-    polygon.segment_offset(input_segment_index(polygon), input_offset_value(), 'parallel')
+    polygon.segment_offset(input_segment_index(polygon), input_offset_value())
     polygon.draw()
     print(polygon.points)  # returns data without last point
 

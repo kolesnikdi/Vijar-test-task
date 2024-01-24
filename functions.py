@@ -21,7 +21,7 @@ def input_polygon_data():
 
 def input_segment_index(polygon):
     while True:
-        user_input = input("Now if you want to change Polygon segment choose it. Enter the Segment index.\n:")
+        user_input = input("Now if you want to change Polygon segment choose it. Enter the Segment segment_index.\n:")
         try:
             segment_index = int(user_input)
             if 0 <= segment_index < len(polygon.segments):
