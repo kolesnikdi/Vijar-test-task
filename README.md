@@ -7,6 +7,7 @@ All possible exceptions in the Polygon recalculation are handled:
 - Removal of unnecessary neighbouring segments. 
 - Clumping the Polygon to 1 point.
 - Removing the current segment as redundant when it goes beyond the intersection of neighbouring segments.
+![img_3.png](img_3.png)
 ## Visualisation: 
 Graph pyplot()
 ## Project launch:
